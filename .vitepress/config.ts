@@ -22,6 +22,7 @@ export default defineConfig({
         items: [
           { text: "Admin Overview", link: "/administration/login" },
           { text: "Board Settings", link: "/administration/settings" },
+          { text: "Social Login", link: "/administration/social-login" },
         ],
       },
       {
