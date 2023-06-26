@@ -17,6 +17,13 @@ export default defineConfig({
 
     sidebar: [
       {
+        text: "User Guide",
+        collapsed: true,
+        items: [
+          { text: "Topics & Posts", link: "/userguide/posting" },
+        ],
+      },
+      {
         text: "Admin",
         collapsed: true,
         items: [
