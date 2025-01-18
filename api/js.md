@@ -34,20 +34,21 @@ The registration function accepts an object with the following properties:
 This example demonstrates a widget with persistent state using Alpine.js:
 
 ```javascript
-window.ForumSpark.registerMiniProfileWidget({
+document.addEventListener("forumspark:init", () => {
+  window.ForumSpark.registerMiniProfileWidget({
     name: "counter",
     state: (user) => ({
-        loading: true,
-        counter: Alpine.$persist(0).as(`counter-${user.username}`),
-        init() {
-            setTimeout(() => (this.loading = false), 2000);
-        },
-        increment() {
-            this.counter++;
-        },
-        get label() {
-            return `Pressed: ${this.counter}`;
-        },
+      loading: true,
+      counter: Alpine.$persist(0).as(`counter-${user.username}`),
+      init() {
+        setTimeout(() => (this.loading = false), 2000);
+      },
+      increment() {
+        this.counter++;
+      },
+      get label() {
+        return `Pressed: ${this.counter}`;
+      },
     }),
     render: (user, store) => `<div>
         <button
@@ -59,6 +60,7 @@ window.ForumSpark.registerMiniProfileWidget({
         ></button>
         <span x-show="${store}.loading">Loading..</span>
     </div>`,
+  });
 });
 ```
 
@@ -67,7 +69,8 @@ window.ForumSpark.registerMiniProfileWidget({
 ForumSpark provides a custom modal web component (`fs-modal`) that can be used in your widgets:
 
 ```javascript
-window.ForumSpark.registerMiniProfileWidget({
+document.addEventListener("forumspark:init", () => {
+  window.ForumSpark.registerMiniProfileWidget({
     name: "modal",
     render: (user) => `
         <div x-data="{
@@ -83,6 +86,7 @@ window.ForumSpark.registerMiniProfileWidget({
             </fs-modal>
         </div>
     `,
+  });
 });
 ```
 
@@ -91,7 +95,8 @@ window.ForumSpark.registerMiniProfileWidget({
 Widgets can incorporate tooltips with rich content and interactions:
 
 ```javascript
-window.ForumSpark.registerMiniProfileWidget({
+document.addEventListener("forumspark:init", () => {
+  window.ForumSpark.registerMiniProfileWidget({
     name: "tooltip",
     render: (user) => `
         <div x-data x-tooltip="{
@@ -114,6 +119,7 @@ window.ForumSpark.registerMiniProfileWidget({
             </template>
         </div>
     `,
+  });
 });
 ```
 
