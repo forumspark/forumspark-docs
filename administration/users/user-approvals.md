@@ -29,4 +29,4 @@ From there, you can choose to:
 
 ## Related Settings
 
-Manual approval can be enabled or disabled from the [Board Settings](/administration/settings) section under the **Registrations** section.
+Manual approval can be enabled or disabled from the [Board Settings](/administration/config/settings) section under the **Registrations** section.
