@@ -17,34 +17,69 @@ export default defineConfig({
     ],
 
     sidebar: [
+      { text: "Introduction", link: "/" },
+      {
+        text: "Admin Guide",
+        collapsed: false,
+        items: [
+          { text: "Overview", link: "/administration/overview" },
+          {
+            text: "Board Configuration",
+            collapsed: true,
+            items: [
+              { text: "Settings", link: "/administration/config/settings" },
+              { text: "Emoticons", link: "/administration/config/emoticons" },
+              { text: "Word Filters", link: "/administration/config/word-filters" },
+              { text: "Reactions", link: "/administration/config/reactions" },
+              { text: "Shoutbox", link: "/administration/config/shoutbox" },
+              { text: "Topic Labels", link: "/administration/config/topic-labels" },
+              { text: "Topic Templates", link: "/administration/config/topic-templates" },
+            ],
+          },
+          {
+            text: "Sections & Structure",
+            collapsed: true,
+            items: [
+              { text: "Section Management", link: "/administration/structure/section-management" },
+            ],
+          },
+          {
+            text: "User Management",
+            collapsed: true,
+            items: [
+              { text: "User Approvals", link: "/administration/users/user-approvals" },
+              // { text: "Editing Users", link: "/administration/users/editing-users" },
+              // { text: "User Roles & Permissions", link: "/administration/users/user-roles" },
+              // { text: "Banning & Moderation", link: "/administration/users/banning" },
+            ],
+          },
+          { text: "Social Login", link: "/administration/social-login" },
+        ],
+      },
       {
         text: "User Guide",
         collapsed: true,
         items: [
           { text: "Topics & Posts", link: "/userguide/posting" },
-        ],
-      },
-      {
-        text: "Admin",
-        collapsed: true,
-        items: [
-          { text: "Admin Overview", link: "/administration/login" },
-          { text: "Board Settings", link: "/administration/settings" },
-          { text: "Social Login", link: "/administration/social-login" },
+          // { text: "Notifications & Subscriptions", link: "/userguide/notifications" },
+          // { text: "Formatting & BBCode", link: "/userguide/formatting" },
         ],
       },
       {
         text: "Theme Guide",
-        link: "theme/",
+        link: "/theme/",
         collapsed: true,
         items: [
           { text: "Intro", link: "/theme/" },
+          // { text: "Customising Themes", link: "/theme/customising" },
+          // { text: "CSS Overrides", link: "/theme/css-overrides" },
+          // { text: "Theme Directory & Sharing", link: "/theme/directory" },
           { text: "Board Templates", link: "/theme/board-template" },
         ],
       },
       {
         text: "Developers",
-        link: "api/",
+        link: "/api/",
         collapsed: true,
         items: [
           { text: "Admin API", link: "/api/" },
@@ -55,7 +90,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      // { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "github", link: "https://github.com/forumspark" },
     ],
   },
   vite: {
