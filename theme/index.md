@@ -9,3 +9,5 @@ This section will give you an overview of how to approach theming with Forum Spa
 As such there are 3 main components that make up a theme: the stylesheet, the board template and the theme images.
 
 ![Theme](/screenshots/theming/theme.png)
+
+test
