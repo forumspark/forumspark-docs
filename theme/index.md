@@ -24,6 +24,8 @@ Everything you need to create and customize themes for your ForumSpark board.
 - [Theme Inheritance](#theme-inheritance)
 - [CSS Variables Starter Template](#css-variables-starter-template)
 - [Color Palette Reference](#color-palette-reference)
+  - [Box Shadows](#box-shadows)
+  - [Divide Utilities & Specificity](#divide-utilities--specificity)
 - [Layout Tokens](#layout-tokens)
 - [Page Body Classes](#page-body-classes)
 - [Theme Images](#theme-images)
@@ -34,6 +36,7 @@ Everything you need to create and customize themes for your ForumSpark board.
   - [Components](#components)
 - [Theme Export & Import](#theme-export--import)
 - [Tips & Best Practices](#tips--best-practices)
+  - [Dark Mode Shadows & Dividers](#dark-mode-shadows--dividers)
 
 ---
 
@@ -288,6 +291,61 @@ Custom shadow utilities used throughout the theme:
 | `shadow-highlight` | `inset 0 1px 0 rgba(255,255,255,0.4)` | Subtle inner highlight on rows |
 | `shadow-highlighter` | `inset 0 1px 0 rgba(255,255,255,0.2)` | Very subtle inner highlight |
 | `shadow-inset` | `inset 0 2px 0 rgba(0,0,0,0.1)` | Subtle top shadow |
+
+> **Dark Mode Warning:** `shadow-highlight`, `shadow-highlighter`, and `shadow-inset-px` produce
+> white `rgba(255,255,255,...)` inset lines that are nearly invisible on light backgrounds but
+> create prominent white lines on dark backgrounds. If your theme includes a dark mode, you must
+> add `box-shadow: none` to every element that uses these utilities. See the
+> [Dark Mode Shadows & Dividers](#dark-mode-shadows--dividers) section below.
+
+### Divide Utilities & Specificity
+
+ForumSpark uses Tailwind `divide-*` utilities (e.g. `divide-y divide-primary-100`) to create
+borders between sibling elements in lists, grids, and panels. These utilities compile to
+child selectors with `:not([hidden])` pseudo-classes:
+
+```css
+/* Source (component CSS): */
+.data-grid { @apply divide-y divide-primary-100; }
+
+/* Compiled output: */
+.data-grid > :not([hidden]) ~ :not([hidden]) {
+    border-color: rgb(226 234 247);  /* primary-100 */
+}
+```
+
+The compiled selector has specificity **0,3,0** (one class + two `:not()` pseudo-classes).
+This is higher than typical override patterns like `> * + *` (specificity 0,2,0).
+
+**When overriding divide colors in a custom theme, you must match Tailwind's selector pattern:**
+
+```css
+/* ❌ WRONG — specificity 0,2,0, loses to compiled divide (0,3,0) */
+.dark .data-grid > * + * {
+    border-color: #1b2d4a;
+}
+
+/* ✅ CORRECT — specificity 0,4,0, wins over compiled divide (0,3,0) */
+.dark .data-grid > :not([hidden]) ~ :not([hidden]) {
+    border-color: #1b2d4a;
+}
+```
+
+Components that use `divide-primary-*` utilities (and thus require this pattern for dark overrides):
+
+| Component | Selector | Divide Direction |
+|---|---|---|
+| Forum list | `.category .panel__content` | `divide-y` |
+| Data grid | `.data-grid` | `divide-y` |
+| Data grid rows | `.data-grid__row` | `divide-x` |
+| Topic replies | `.topic .replies` | `divide-y` |
+| Topic details | `.topic-row__details` | `divide-x` |
+| Profile grid | `.profile-grid` | `divide-x` |
+| Form rows | `.formrow` | `divide-x` |
+| Item lists | `.item-list` | `divide-y` |
+| Notifications | `.notifications__list` | `divide-y` |
+| Quotes list | `.quotes-list` | `divide-y` |
+| Moderated posts | `.panel--moderated-posts .panel__content` | `divide-y` |
 
 ### Font
 
@@ -1277,10 +1335,50 @@ If your board has dark mode enabled, prefix styles with `.dark`:
 .dark body { background-color: #0f172a; color: #e2e8f0; }
 ```
 
+#### Dark Mode Shadows & Dividers
+
+The two most common sources of unwanted light artifacts in dark themes:
+
+**1. White inset shadows** — `shadow-highlight`, `shadow-highlighter`, and `shadow-inset-px`
+create white `rgba(255,255,255,...)` top lines on dozens of elements. In dark mode, add
+`box-shadow: none` to every affected element:
+
+```css
+/* Example: neutralize white inset shadow on topic rows */
+.dark .topic-row { box-shadow: none; }
+.dark .reply .reply__user { box-shadow: none; }
+.dark .reply .reply__content { box-shadow: none; }
+.dark .formrow { box-shadow: none; }
+.dark .formrow > div:first-child { box-shadow: none; }
+.dark .formrow > div:last-child { box-shadow: none; }
+/* ... and so on for every element using shadow-highlight/highlighter/inset-px */
+```
+
+**2. Divide border colors** — Tailwind `divide-primary-100` compiles to a `:not([hidden])`
+selector with higher specificity than simple combinators. You must use the matching pattern:
+
+```css
+/* ✅ Must use :not([hidden]) ~ :not([hidden]) to override divide utility */
+.dark .data-grid > :not([hidden]) ~ :not([hidden]) {
+    border-color: #1e293b;
+}
+.dark .item-list > :not([hidden]) ~ :not([hidden]) {
+    border-color: #1e293b;
+}
+.dark .profile-grid > :not([hidden]) ~ :not([hidden]) {
+    border-color: #1e293b;
+}
+```
+
+See the [Divide Utilities & Specificity](#divide-utilities--specificity) section in the
+Color Palette Reference for the full list of components requiring this pattern.
+
 ### Test Responsively
 ForumSpark uses `sm:` breakpoint (640px) extensively. Many elements are hidden on mobile and shown on desktop (or vice versa). Test your theme at both sizes.
 
 ### Use the Autosave Feature
 The stylesheet editor has an autosave toggle that saves your CSS every 60 seconds — useful during extended editing sessions.
 
-If you ever need additional help, feel free to use our support forum. 
+If you ever need additional help, feel free to use our support forum.
+
+
