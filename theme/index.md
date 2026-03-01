@@ -1282,3 +1282,5 @@ ForumSpark uses `sm:` breakpoint (640px) extensively. Many elements are hidden o
 
 ### Use the Autosave Feature
 The stylesheet editor has an autosave toggle that saves your CSS every 60 seconds — useful during extended editing sessions.
+
+If you ever need additional help, feel free to use our support forum. 
