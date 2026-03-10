@@ -13,7 +13,8 @@ To add a new emoticon, provide the following:
 - **Display order**: Determines where the emoticon appears in the selection list. Lower numbers appear first.
 - **Show in list**: If enabled, the emoticon will appear in the emoticon picker UI. You can keep this off for hidden or rarely used emoticons.
 
-![Add Emoticon Form](/screenshots/admin/emoticons.png)
+<img width="1943" height="701" alt="image" src="https://github.com/user-attachments/assets/e7654ca2-a2a9-4e1d-9629-4430ffaa9481" />
+
 
 ## Notes
 
