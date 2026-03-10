@@ -16,7 +16,8 @@ By default, your board is not listed in the directory. To opt in:
 4. Write a short **Description** (max 500 characters) to help visitors understand what your forum is about.
 5. Save your changes.
 
-![Directory Settings](/screenshots/admin/directory-settings.png)
+<img width="1933" height="1462" alt="image" src="https://github.com/user-attachments/assets/8eea2508-b9e2-4a39-8e37-f0c8fb2304ea" />
+
 
 ## Categories
 
