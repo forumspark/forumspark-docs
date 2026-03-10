@@ -23,7 +23,6 @@ From there, you can choose to:
     - The account is immediately deleted.
     - No further action is required.
 
-![Approve or Deny User](/screenshots/admin/user-approval.png)
 
 > Note: This process is one-time. Once approved or denied, the account status cannot be reverted.
 
