@@ -2,8 +2,6 @@
 
 Help pages provide a built-in documentation area for your board. Use them to answer common questions, explain board rules or provide guidance for new members. You can manage them under the **Content** navigation group in the Admin CP.
 
-![Help Pages](/screenshots/admin/help-pages.png)
-
 [[toc]]
 
 ## Creating a help page
@@ -16,7 +14,7 @@ Click **Create Help Page** to add a new entry. Each help page has the following 
 - **Content** — the body of the help page, written in BBCode. Supports up to 60,000 characters.
 - **Sort Order** — controls the display order in the help section.
 
-![Create Help Page](/screenshots/admin/create-help-page.png)
+<img width="1936" height="1139" alt="image" src="https://github.com/user-attachments/assets/8d8800c5-18ec-440a-bfe1-127d695f3173" />
 
 ## Publishing
 
