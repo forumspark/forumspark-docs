@@ -2,7 +2,6 @@
 
 Banning prevents a user from accessing your board. Bans can be permanent or temporary, and are managed from the user's profile in the Admin CP or through the moderation tools.
 
-![Banning](/screenshots/admin/banning.png)
 
 [[toc]]
 
@@ -29,7 +28,7 @@ When banning a user, you will be asked to provide:
 - **Reason** — a short explanation for the ban (up to 255 characters). This is visible to the banned user when they attempt to access the board.
 - **Duration** — choose **permanent** or set a time period using the interval and type fields.
 
-![Ban User](/screenshots/admin/ban-user.png)
+<img width="1949" height="745" alt="image" src="https://github.com/user-attachments/assets/8e898892-a48c-4f4e-bb80-f14fbb9b59f4" />
 
 ## What banned users see
 
