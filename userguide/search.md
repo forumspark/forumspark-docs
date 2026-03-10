@@ -8,7 +8,8 @@ The search feature lets you find topics and posts across the board.
 
 Click **Search** in the navigation bar to open the search page. Enter your query and press **Search** to find matching content.
 
-![Search](/screenshots/userguide/search.png)
+<img width="1956" height="575" alt="image" src="https://github.com/user-attachments/assets/5cd7c6a8-93ef-4de6-963b-052ffd728d40" />
+
 
 ## Search results
 
@@ -20,8 +21,6 @@ Results show matching posts along with:
 - The date the post was made.
 
 Results are paginated if there are many matches.
-
-![Search Results](/screenshots/userguide/search-results.png)
 
 ## Search scope
 
