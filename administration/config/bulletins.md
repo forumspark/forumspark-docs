@@ -24,7 +24,8 @@ Fill in the following fields:
 - **Starts At**: Optional. The date and time when the bulletin should start appearing.
 - **Ends At**: Optional. The date and time when the bulletin should stop appearing. Must be after the start date.
 
-![Create Bulletin](/screenshots/admin/create-bulletin.png)
+<img width="1935" height="1854" alt="image" src="https://github.com/user-attachments/assets/49f99a9a-f1ed-44f0-b910-f39d4a19f1d1" />
+
 
 ## Styles
 
