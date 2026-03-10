@@ -22,7 +22,8 @@ When creating a new section, start by providing the basic information:
 - **Name**: The title of the section. This will be shown in the forum index.
 - **Description**: A short summary explaining the section's purpose. BBCode is supported here.
 
-![Create Forum View](/screenshots/admin/create-forum.png)
+<img width="1920" height="1691" alt="image" src="https://github.com/user-attachments/assets/7f7af879-383c-4ed4-a46a-f170e20e6ddd" />
+
 
 ## Posting Controls
 
