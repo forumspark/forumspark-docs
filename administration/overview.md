@@ -9,7 +9,7 @@ To get started:
 1. **Log into the user account** you created during forum registration.
 2. In the top-right corner of the page, click on your username to open the user menu:
 
-![User Menu](/screenshots/admin/login.png)
+<img width="1951" height="414" alt="image" src="https://github.com/user-attachments/assets/1910d8ab-1fca-4eda-bb92-a91a50d0bab3" />
 
 3. From the dropdown, click **“Admin CP”**.
 
@@ -19,7 +19,7 @@ To get started:
 
 Once inside the Admin CP, you'll land on the **Admin Dashboard**:
 
-![Admin Dashboard](/screenshots/admin/dashboard.png)
+<img width="1967" height="1832" alt="image" src="https://github.com/user-attachments/assets/fc322632-fb50-4acd-b0e5-d3a2fb339de5" />
 
 Here you’ll find:
 
