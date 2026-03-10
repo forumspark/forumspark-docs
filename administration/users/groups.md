@@ -18,7 +18,8 @@ Fill in the following fields:
 - **Sort Order**: Controls the display order in group listings. Lower numbers appear first.
 - **Show on Staff Page**: If enabled, members of this group will appear on the public Staff page.
 
-![Create Group](/screenshots/admin/create-group.png)
+<img width="1940" height="1517" alt="image" src="https://github.com/user-attachments/assets/23584ac0-7217-4b5e-a5c6-87e0b3d3c567" />
+
 
 ## Forum Permissions
 
