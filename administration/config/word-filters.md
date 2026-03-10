@@ -13,7 +13,8 @@ To add a new filter, provide:
 - **Text to replace**: The word or phrase you want to block.
 - **Replacement**: What the word should be replaced with. This can be another word or a censored version (e.g. `****`)
 
-![Add Filter](/screenshots/admin/word-filters.png)
+<img width="1942" height="471" alt="image" src="https://github.com/user-attachments/assets/3144217e-75a4-419c-8c7c-471932f00515" />
+
 
 Filters apply automatically to all new content posted by users, including forum posts, private messages, and topic titles.
 
