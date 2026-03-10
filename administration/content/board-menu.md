@@ -2,7 +2,8 @@
 
 The board menu controls the navigation links shown at the top of your board. You can add, remove and reorder items to customise the navigation experience for your users. Menu management is found under the **Content** navigation group in the Admin CP.
 
-![Board Menu](/screenshots/admin/board-menu.png)
+<img width="1946" height="936" alt="image" src="https://github.com/user-attachments/assets/b07b2ba8-8a47-474d-ac91-95e0676fa73c" />
+
 
 [[toc]]
 
@@ -57,7 +58,7 @@ Click **Create Menu Item** and fill in:
 - Depending on the type, you will be asked for a **feature**, **URL** or **page**.
 - **Sort Order** — controls the position in the navigation bar (lower numbers appear first).
 
-![Create Menu Item](/screenshots/admin/create-menu-item.png)
+<img width="1937" height="674" alt="image" src="https://github.com/user-attachments/assets/da207c96-2a09-498c-beff-8e91eb52f2e7" />
 
 ## Reordering menu items
 
