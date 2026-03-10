@@ -16,8 +16,6 @@ The security log displays a chronological list of events, with the most recent e
 
 Logs are paginated at 50 entries per page.
 
-![Security Logs](/screenshots/admin/security-logs.png)
-
 ## Event Types
 
 The following event types are tracked:
