@@ -2,7 +2,8 @@
 
 All of the following settings can be changed from within the board settings section of the Admin CP. These are located at `/admin/preferences`. You can find them under the **Board Config** navigation group by clicking **Settings**.
 
-![Board Config](/screenshots/admin/board-config.png)
+<img width="1947" height="1677" alt="image" src="https://github.com/user-attachments/assets/cc45cf6c-f308-451f-9bee-848e056da33f" />
+
 
 [[toc]]
 
@@ -29,7 +30,8 @@ Control whether your board is publicly available. If disabled:
 
 You can also define a **custom offline message**, which supports BBCode for formatting.
 
-![Board offline controls](/screenshots/admin/board-offline.png)
+<img width="1509" height="457" alt="image" src="https://github.com/user-attachments/assets/6aee6378-6486-454d-9756-9b9a28e3d9d9" />
+
 
 ## Disable registrations
 
@@ -44,8 +46,6 @@ When this setting is enabled:
 - Admins will receive a notification that a new user is pending
 - The user will receive a confirmation email once they are approved
 
-See [User Approvals](/administration/users/user-approvals) for the full flow.
-
 
 ## Default user groups
 
@@ -55,8 +55,6 @@ All users are assigned a user group, which determines their permissions.
 - **Default User Group**: Assigned to users after they register.
 
 These groups are locked from deletion while they are in use as defaults.
-
-![Default User Groups](/screenshots/admin/default-groups.png)
 
 ## Default avatar
 
@@ -79,5 +77,3 @@ You can configure:
 - **Rate limit decay**: The time window in minutes.
 
 For example, with a max of 5 posts and a decay of 1 minute, users can post 5 times per minute before being rate-limited.
-
-![Rate limiting](/screenshots/admin/rate-limiting.png)
