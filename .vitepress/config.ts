@@ -34,6 +34,9 @@ export default defineConfig({
               { text: "Shoutbox", link: "/administration/config/shoutbox" },
               { text: "Topic Labels", link: "/administration/config/topic-labels" },
               { text: "Topic Templates", link: "/administration/config/topic-templates" },
+              { text: "Achievements", link: "/administration/config/achievements" },
+              { text: "Bulletins", link: "/administration/config/bulletins" },
+              { text: "AutoMod", link: "/administration/config/automod" },
             ],
           },
           {
@@ -44,16 +47,48 @@ export default defineConfig({
             ],
           },
           {
+            text: "Content",
+            collapsed: true,
+            items: [
+              { text: "Custom Pages", link: "/administration/content/pages" },
+              { text: "Help Pages", link: "/administration/content/help-pages" },
+              { text: "Board Menu", link: "/administration/content/board-menu" },
+            ],
+          },
+          {
             text: "User Management",
             collapsed: true,
             items: [
               { text: "User Approvals", link: "/administration/users/user-approvals" },
-              // { text: "Editing Users", link: "/administration/users/editing-users" },
-              // { text: "User Roles & Permissions", link: "/administration/users/user-roles" },
-              // { text: "Banning & Moderation", link: "/administration/users/banning" },
+              { text: "Groups & Permissions", link: "/administration/users/groups" },
+              { text: "Custom Profile Fields", link: "/administration/users/custom-fields" },
+              { text: "Name Changes", link: "/administration/users/name-changes" },
+              { text: "Banning", link: "/administration/users/banning" },
+              { text: "Social Login", link: "/administration/users/social-login" },
             ],
           },
-          { text: "Social Login", link: "/administration/social-login" },
+          {
+            text: "Moderation",
+            collapsed: true,
+            items: [
+              { text: "Moderation Guide", link: "/administration/moderation/moderation" },
+            ],
+          },
+          {
+            text: "ForumSpark",
+            collapsed: true,
+            items: [
+              { text: "Custom Domains", link: "/administration/forumspark/custom-domains" },
+              { text: "Directory Listing", link: "/administration/forumspark/directory-listing" },
+            ],
+          },
+          {
+            text: "Advanced",
+            collapsed: true,
+            items: [
+              { text: "Security Logs", link: "/administration/advanced/security-logs" },
+            ],
+          },
         ],
       },
       {
@@ -61,8 +96,12 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Topics & Posts", link: "/userguide/posting" },
-          // { text: "Notifications & Subscriptions", link: "/userguide/notifications" },
-          // { text: "Formatting & BBCode", link: "/userguide/formatting" },
+          { text: "Polls", link: "/userguide/polls" },
+          { text: "Private Messages", link: "/userguide/private-messages" },
+          { text: "Notifications", link: "/userguide/notifications" },
+          { text: "Your Profile", link: "/userguide/profile" },
+          { text: "Search", link: "/userguide/search" },
+          { text: "Formatting & BBCode", link: "/userguide/formatting" },
         ],
       },
       {
