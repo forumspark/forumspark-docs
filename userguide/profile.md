@@ -29,7 +29,7 @@ Navigate to **Edit Profile** from the user menu to update your information. The 
 - **Timezone** — set your timezone so that timestamps are displayed in your local time.
 - **Dark Mode** — toggle between light and dark themes.
 
-![Edit Profile](/screenshots/userguide/edit-profile.png)
+<img width="1937" height="1551" alt="image" src="https://github.com/user-attachments/assets/f5a6bb27-8656-42fe-8614-c391c3b2e0db" />
 
 ## Custom profile fields
 
@@ -43,7 +43,8 @@ Upload a custom avatar from the edit profile page. To remove your avatar and rev
 
 If your board has achievements enabled, you can view your earned and locked achievements from your profile page. Toggle the **Showcase** option on any earned achievement to display it prominently on your profile.
 
-![Achievement Showcase](/screenshots/userguide/achievement-showcase.png)
+<img width="2080" height="1883" alt="image" src="https://github.com/user-attachments/assets/73d5a6d7-67e8-4955-8cb6-bf7764015060" />
+
 
 ## Name changes
 
