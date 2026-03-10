@@ -20,7 +20,8 @@ Fill in the following fields:
 - **Pin Topic**: If enabled, the topic will be automatically pinned to the top of the forum.
 - **Global**: If enabled, the rule applies to all forums. If disabled, you can select specific forums where the rule should apply.
 
-![Create AutoMod Rule](/screenshots/admin/create-automod.png)
+<img width="1955" height="1071" alt="image" src="https://github.com/user-attachments/assets/8f09aca9-bada-46e3-9598-d5012894501b" />
+
 
 ## Available Actions
 
