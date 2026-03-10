@@ -16,7 +16,8 @@ The domain must be a valid fully qualified domain name. For example:
 - `community.mysite.org`
 - `example.com`
 
-![Add Custom Domain](/screenshots/admin/add-domain.png)
+<img width="1946" height="744" alt="image" src="https://github.com/user-attachments/assets/b0639959-b525-4225-833a-742a6881809c" />
+
 
 ## Setting Up DNS
 
