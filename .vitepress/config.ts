@@ -13,7 +13,7 @@ export default defineConfig({
     nav: [
       { text: "Forum Spark", link: "https://forumspark.net" },
       { text: "Support Forum", link: "https://support.forumspark.net" },
-      { text: "API Docs", link: "https://forumspark.net/api" },
+      { text: "API Reference", link: "https://forumspark.net/api" },
     ],
 
     sidebar: [
@@ -121,9 +121,10 @@ export default defineConfig({
         link: "/api/",
         collapsed: true,
         items: [
-          { text: "Admin API", link: "/api/" },
+          { text: "Getting Started", link: "/api/" },
           { text: "Webhooks", link: "/api/webhooks" },
-          { text: "Javascript API", link: "/api/js" },
+          { text: "JavaScript API", link: "/api/js" },
+          { text: "Recipes", link: "/api/recipes" },
         ],
       },
     ],

@@ -1,37 +1,118 @@
-# Javascript API Documentation
+# JavaScript API
 
-## Overview
+ForumSpark exposes a global `ForumSpark` object in the browser that provides access to the current user, dark mode controls, favicon badges and a widget system for extending user profiles.
 
-ForumSpark provides several frontend APIs to enhance your forum's client-side functionality. These APIs enable access to user data, custom profile widgets, and UI components, allowing developers to create rich, interactive forum experiences.
+[[toc]]
 
-## Current User Data
+## Getting started
 
-User data is accessible through the global `ForumSpark` object in the browser window. The current authenticated user's information can be accessed via `ForumSpark.currentUser`, which includes:
+All frontend APIs are available through `window.ForumSpark`. To run code after ForumSpark has initialised, listen for the `forumspark:init` event:
 
-- User's name
-- Username
-- Other user details
-- `frontend_secret` - a unique identifier for secure frontend-to-backend communication
+```javascript
+document.addEventListener("forumspark:init", () => {
+  console.log("ForumSpark is ready");
+  console.log(window.ForumSpark.currentUser);
+});
+```
 
-The `frontend_secret` is a special property that can be used to validate user actions in your backend endpoints. This secret is only exposed through the frontend API and should be validated against the user API when processing requests. For security purposes, always verify this secret server-side when handling user actions.
+You can include your custom JavaScript via the **Head** or **After the Board** injection fields in the board settings, or through a custom theme layout.
 
-## Mini Profile Widgets
+## Current user
 
-ForumSpark allows registration of custom widgets that appear in user profiles. These widgets can be registered using `window.ForumSpark.registerMiniProfileWidget()` and support various interactive features including state management, modals, and tooltips.
+The authenticated user's data is available at `ForumSpark.currentUser`:
 
-### Widget Registration
+```javascript
+const user = window.ForumSpark.currentUser;
+console.log(user.username); // "alice"
+```
 
-The registration function accepts an object with the following properties:
+### Available properties
 
-- `name`: A unique identifier for your widget (required)
-- `state`: A function that returns an Alpine.js state object (optional)
-- `render`: A function that returns the widget's HTML markup (required)
+| Property | Type | Description |
+|----------|------|-------------|
+| `id` | number | User ID |
+| `name` | string | Display name |
+| `username` | string | Unique username |
+| `custom_user_title` | string \| null | Custom title override |
+| `avatar` | string \| null | Avatar URL |
+| `member_number` | number | Registration order |
+| `num_posts` | number | Total post count |
+| `num_topics` | number | Total topic count |
+| `dark_mode` | boolean | Dark mode preference |
+| `auto_watch_replies` | boolean | Auto-watch topics on reply |
+| `signature` | string \| null | Formatted signature HTML |
+| `email_topic_reply` | boolean | Email notifications for replies |
+| `weekly_digest` | boolean | Weekly digest emails |
+| `frontend_secret` | string | Secret for frontend-to-backend validation |
 
-### Widget Types and Examples
+The `frontend_secret` can be used to validate user actions in your own backend endpoints. Send it along with API calls to your server and verify it against the ForumSpark user API.
 
-#### Stateful Widget
+## Dark mode
 
-This example demonstrates a widget with persistent state using Alpine.js:
+ForumSpark provides reactive dark mode controls that sync with the server.
+
+### Reading dark mode state
+
+```javascript
+if (window.ForumSpark.darkMode) {
+  console.log("Dark mode is enabled");
+}
+```
+
+### Toggling dark mode
+
+```javascript
+window.ForumSpark.toggleDarkMode();
+```
+
+This toggles the `dark` class on the `<body>` element and sends a `PATCH` request to `/frontend/api/me/dark-mode` to persist the preference.
+
+## Favicon badges
+
+Show a notification count on the browser tab favicon.
+
+### Setting a count
+
+```javascript
+// Show a red badge with the number 3
+window.ForumSpark.setFaviconCount(3);
+```
+
+This overlays a red circular badge on the existing favicon. The badge scales to fit the number of digits.
+
+### Clearing the badge
+
+```javascript
+window.ForumSpark.restoreFavicon();
+```
+
+This restores the original favicon without a badge.
+
+## Mini profile widgets
+
+Register custom widgets that appear alongside user posts in the mini profile area. Widgets use [Alpine.js](https://alpinejs.dev/) for reactivity.
+
+### Registration
+
+```javascript
+window.ForumSpark.registerMiniProfileWidget({
+  name: "my-widget",     // Unique identifier (required)
+  render: (user, store) => `...`,  // Returns HTML string (required)
+  state: (user) => ({ ... }),      // Returns Alpine store data (optional)
+  onInit: (user) => { ... },       // Called when profile loads (optional)
+});
+```
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `name` | string | Yes | Unique widget identifier |
+| `render` | function | Yes | Returns HTML markup. Receives `user` object and `store` reference (if `state` is defined). |
+| `state` | function | No | Returns an Alpine.js store object. The store is namespaced per user as `{name}-{user.id}`. |
+| `onInit` | function | No | Called once when a user's profile loads. Receives the `user` object. |
+
+### Example: stateful widget
+
+A counter that persists across page loads using Alpine.js `$persist`:
 
 ```javascript
 document.addEventListener("forumspark:init", () => {
@@ -64,9 +145,9 @@ document.addEventListener("forumspark:init", () => {
 });
 ```
 
-#### Modal Widget
+### Example: modal widget
 
-ForumSpark provides a custom modal web component (`fs-modal`) that can be used in your widgets:
+ForumSpark provides a `<fs-modal>` web component for consistent modal dialogs:
 
 ```javascript
 document.addEventListener("forumspark:init", () => {
@@ -90,9 +171,9 @@ document.addEventListener("forumspark:init", () => {
 });
 ```
 
-#### Interactive Tooltip Widget
+### Example: tooltip widget
 
-Widgets can incorporate tooltips with rich content and interactions:
+Widgets can use the `x-tooltip` directive for rich interactive tooltips:
 
 ```javascript
 document.addEventListener("forumspark:init", () => {
@@ -123,15 +204,33 @@ document.addEventListener("forumspark:init", () => {
 });
 ```
 
-## Best Practices
+## Method reference
 
-When implementing frontend widgets:
+| Method | Parameters | Description |
+|--------|------------|-------------|
+| `init()` | — | Initialises ForumSpark and dispatches the `forumspark:init` event. Called automatically. |
+| `setCurrentUser(user)` | User object | Sets the current user and syncs dark mode. Called automatically. |
+| `toggleDarkMode()` | — | Toggles dark mode on/off and persists to the server. |
+| `getDarkMode()` | — | Returns the current dark mode state (boolean). |
+| `setFaviconCount(count)` | number | Overlays a red notification badge on the favicon. |
+| `restoreFavicon()` | — | Removes the favicon badge and restores the original. |
+| `registerMiniProfileWidget(options)` | Object | Registers a custom widget in the mini profile area. |
 
-1. Always use the provided `store` parameter when referencing state in your render function
-2. Implement loading states for asynchronous operations
-3. Use Alpine.js's `$persist` feature for maintaining state across page loads
-4. Validate any user actions server-side using the `frontend_secret`
-5. Follow proper security practices when handling user data
-6. Use the provided UI components (like `fs-modal`) for consistent user experience
+## Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `currentUser` | object \| null | The authenticated user's data. `null` for guests. |
+| `darkMode` | boolean | Reactive dark mode state. Can be read or set directly. |
+| `profileWidgets` | array | Reactive array of registered mini profile widgets. |
+
+## Best practices
+
+1. Always use the provided `store` parameter when referencing state in your render function.
+2. Implement loading states for asynchronous operations.
+3. Use Alpine.js `$persist` for maintaining state across page loads.
+4. Validate user actions server-side using the `frontend_secret`.
+5. Use the provided UI components (`<fs-modal>`) for a consistent user experience.
+6. Listen for `forumspark:init` before accessing the API — the object may not be ready on `DOMContentLoaded`.
 
 The ForumSpark frontend API is designed to work seamlessly with Alpine.js, providing a robust foundation for building interactive forum features.
