@@ -13,7 +13,7 @@ You can configure the Shoutbox from the **Board Config** section of the Admin Co
 - **Title**: The heading shown above the Shoutbox. You can rename this to suit your community tone.
 - **Rules**: Optional text shown beneath the shout input. This text appears in a modal when users click the “Rules” link next to the Shoutbox title. BBCode is supported here.
 
-![Shoutbox Settings](/screenshots/admin/shoutbox.png)
+<img width="1938" height="695" alt="image" src="https://github.com/user-attachments/assets/3115ae44-ce7f-4722-b613-4c0a79f859c6" />
 
 ## Embedding the Shoutbox in Themes
 
