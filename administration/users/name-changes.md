@@ -2,7 +2,8 @@
 
 Name change requests allow members to request a new username, which must be approved by an administrator before it takes effect. This feature is managed under the **User Management** navigation group in the Admin CP.
 
-![Name Changes](/screenshots/admin/name-changes.png)
+<img width="1949" height="455" alt="image" src="https://github.com/user-attachments/assets/d89c71cf-32f0-46d6-9c18-a5f8e4cb0ee9" />
+
 
 [[toc]]
 
@@ -24,8 +25,6 @@ Only one pending request can be active at a time. The member must wait for a dec
 ## Reviewing requests
 
 In the Admin CP, the name changes page shows all pending requests. Each entry displays the member's current username, their requested username and the reason provided.
-
-![Pending Name Change](/screenshots/admin/pending-name-change.png)
 
 ### Approving a request
 
