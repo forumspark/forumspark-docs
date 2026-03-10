@@ -54,7 +54,8 @@ Fill in the following fields:
 - **Active**: Whether the achievement is currently earnable.
 - **Secret**: If enabled, the achievement is hidden from users until they earn it.
 
-![Create Achievement](/screenshots/admin/create-achievement.png)
+<img width="1947" height="1490" alt="image" src="https://github.com/user-attachments/assets/8b5d2703-9e8a-44de-a1a3-5e8d16a589b0" />
+
 
 ## System Achievements
 
