@@ -2,12 +2,6 @@
 
 ForumSpark gives you fine-grained control over your board structure by letting you create and manage individual sections. Sections can be either **categories** (containers) or **forums** (postable areas), depending on how you configure them.
 
-## Watch: Setting Up a Basic Forum Structure
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mZKQpxHsypk?si=-rnb-xVBhIm21w8b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-If you're just getting started, this short video walks through the basics of creating categories and forums using the Admin CP.
-
 ## Accessing the Admin Panel
 
 To begin managing sections, access your Admin Control Panel through the User menu in the top-right navigation bar. Select **"Admin CP"** from the dropdown.
