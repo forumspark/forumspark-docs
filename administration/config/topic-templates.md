@@ -16,7 +16,8 @@ To create a new template:
 - **Name**: A label to identify the template in the admin area.
 - **Content**: The prefilled content that will appear in the topic body when users create a new thread. This field supports BBCode.
 
-![Add Topic Template](/screenshots/admin/topic-templates.png)
+<img width="1943" height="617" alt="image" src="https://github.com/user-attachments/assets/1d526fb6-cb5c-4b35-b3ee-6134311f58dc" />
+
 
 ## Applying a Template to a Forum
 
