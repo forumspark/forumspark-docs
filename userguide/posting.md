@@ -12,7 +12,8 @@ To start a new topic, navigate to the forum you want to post in and click **Crea
 - **Label** — if the forum has topic labels configured, you can choose one to categorise your topic.
 - **Poll** — optionally attach a poll to your topic (see [Polls](/userguide/polls) for details).
 
-![Create Topic](/screenshots/userguide/create-topic.png)
+<img width="1942" height="1351" alt="image" src="https://github.com/user-attachments/assets/bed147f3-6508-468f-8d2b-19a35321e003" />
+
 
 After posting, you will automatically watch the topic and receive notifications when others reply.
 
@@ -22,7 +23,8 @@ Scroll to the bottom of any topic to find the reply box. Type your response usin
 
 When you reply to a topic, you will automatically watch it (unless you have disabled this in your notification preferences).
 
-![Reply Box](/screenshots/userguide/reply-box.png)
+<img width="1940" height="580" alt="image" src="https://github.com/user-attachments/assets/d237040e-bca7-443d-a1a9-e0e720b7ce65" />
+
 
 ## Quoting and multi-quote
 
@@ -38,7 +40,8 @@ To quote multiple posts in a single reply:
 2. Click **Insert Quotes** when you are ready to compose your reply.
 3. All selected quotes will be inserted into the reply box.
 
-![Multi Quote](/screenshots/userguide/multi-quote.png)
+<img width="1947" height="1598" alt="image" src="https://github.com/user-attachments/assets/cb73d55f-0ae9-4502-aebb-600cd0de03d8" />
+
 
 ## Mentioning users
 
@@ -52,11 +55,13 @@ Click the **Edit** button on your own post to update its content. Edited posts d
 
 If you make a mistake with your topic title, description or want to change the label you can do this by navigating to the "Edit Topic Title" link next to the opening post you created.
 
-![Edit title](/screenshots/userguide/edit-title.png)
+<img width="1934" height="146" alt="image" src="https://github.com/user-attachments/assets/0eeac6b1-a371-45e1-bee4-934cf004da33" />
+
 
 From here you will be presented with fields to update the title, description and change label if applicable. Only the topic author, moderators and admins can edit the topic.
 
-![Edit topic](/screenshots/userguide/topic-edit-screen.png)
+<img width="1946" height="450" alt="image" src="https://github.com/user-attachments/assets/d2bce745-18f3-4b4e-804e-a9e5cd080cd9" />
+
 
 ## Reactions
 
@@ -64,4 +69,4 @@ Click on a reaction emoji below any post to react to it. Click the same emoji ag
 
 Reactions contribute to the post author's reputation and may count towards achievements.
 
-![Reactions](/screenshots/userguide/reactions.png)
+<img width="1931" height="314" alt="image" src="https://github.com/user-attachments/assets/d746223e-9351-45ab-99c7-d39297d595e0" />
