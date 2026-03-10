@@ -2,8 +2,6 @@
 
 Custom pages let you create standalone content on your board, such as rules, guidelines, about pages or any other static information. You can find them under the **Content** navigation group in the Admin CP.
 
-![Custom Pages](/screenshots/admin/custom-pages.png)
-
 [[toc]]
 
 ## Creating a page
@@ -17,7 +15,7 @@ Click **Create Page** to add a new page. Each page has the following fields:
 - **Content Format** — choose between **BBCode** or **HTML**.
 - **Sort Order** — controls the display order when listing pages.
 
-![Create Page](/screenshots/admin/create-page.png)
+<img width="1936" height="1059" alt="image" src="https://github.com/user-attachments/assets/a0b99970-ef3c-4e22-a3b8-cf7b7a18c430" />
 
 ## Content formats
 
