@@ -18,7 +18,8 @@ You may receive notifications for the following events:
 
 Click the notification icon in the navigation bar to see your recent notifications. Each entry shows a summary of the event, who triggered it and a link to the relevant content.
 
-![Notifications](/screenshots/userguide/notifications.png)
+<img width="1975" height="843" alt="image" src="https://github.com/user-attachments/assets/ac44ede2-aee1-4751-9044-fefafbf8bc07" />
+
 
 ## Managing notification preferences
 
@@ -28,7 +29,8 @@ You can control which notifications you receive by visiting **Edit Profile** and
 - **Weekly digest** — receive a compiled summary of board activity each week.
 - **Auto-watch replies** — automatically watch any topic you reply to.
 
-![Notification Preferences](/screenshots/userguide/notification-preferences.png)
+<img width="1937" height="730" alt="image" src="https://github.com/user-attachments/assets/3377f24d-f2e8-410e-b455-3935189f4478" />
+
 
 ## Watching topics
 
