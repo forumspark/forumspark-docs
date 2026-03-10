@@ -14,7 +14,8 @@ To define a new reaction, fill out the following fields:
 - **Reaction Score**: A number used to increase or decrease the recipient's total reaction score when this reaction is received. Each user’s reaction only contributes once per post.
 - **Display Order**: Controls where this reaction appears in reaction lists. Lower numbers appear first.
 
-![Add Reaction Form](/screenshots/admin/reactions.png)
+<img width="1949" height="901" alt="image" src="https://github.com/user-attachments/assets/f7c21b5a-676a-4419-a9c1-46fa79c91323" />
+
 
 ## Notes
 
