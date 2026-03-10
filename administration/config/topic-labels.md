@@ -23,7 +23,8 @@ To create a new label:
 - **Available in all forums**: Toggle this to make the label usable in every forum (global). When disabled, you can pick which specific forums should allow this label.
 - **Available forums**: A list of forums where the label can be used (only shown when the label is not global).
 
-![Add Topic Label](/screenshots/admin/labels.png)
+<img width="1941" height="1001" alt="image" src="https://github.com/user-attachments/assets/9d7f8f3f-cfc7-4eb8-b813-b6d456326b19" />
+
 
 ## Upcoming Features
 
