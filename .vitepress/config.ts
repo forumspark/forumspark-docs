@@ -110,9 +110,8 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Intro", link: "/theme/" },
-          // { text: "Customising Themes", link: "/theme/customising" },
-          // { text: "CSS Overrides", link: "/theme/css-overrides" },
-          // { text: "Theme Directory & Sharing", link: "/theme/directory" },
+          { text: "Visual Theme Editor", link: "/theme/theme-editor" },
+          { text: "Custom Layout Templates", link: "/theme/custom-templates" },
           { text: "Board Templates", link: "/theme/board-template" },
         ],
       },
@@ -132,6 +131,18 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/forumspark" },
     ],
+  },
+  markdown: {
+    config(md) {
+      // Escape {{ }} in rendered HTML so Vue doesn't treat them as template interpolation.
+      // Needed for docs pages that show Mustache-style template examples.
+      const originalRender = md.render.bind(md)
+      md.render = (src: string, env: any) => {
+        return originalRender(src, env)
+          .replace(/\{\{/g, '&#123;&#123;')
+          .replace(/\}\}/g, '&#125;&#125;')
+      }
+    },
   },
   vite: {
     server: {
